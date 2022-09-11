@@ -306,7 +306,7 @@ where
         endpoint.path()
     );
     let mut m = client.middle().clone();
-    m.wrap = Some("10m".to_string());
+    m.wrap = Some("60s".to_string());
     let resp = endpoint
         .with_middleware(&m)
         .exec(client.http())
